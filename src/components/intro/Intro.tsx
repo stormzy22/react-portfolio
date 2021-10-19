@@ -9,9 +9,14 @@ const Intro: React.FC = (): JSX.Element => {
           <h2 className="i-name">John Stone</h2>
           <div className="i-title">
             <div className="i-title-wrapper">
-              <div className="i-title-item"></div>
+              {I_TITLE_ITEM?.map((text, i) => (
+                <div className="i-title-item" key={i}>
+                  {text}
+                </div>
+              ))}
             </div>
           </div>
+          <div className="i-desc">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores.</div>
         </div>
       </div>
       <div className="i-right">right</div>
@@ -20,3 +25,5 @@ const Intro: React.FC = (): JSX.Element => {
 };
 
 export default Intro;
+
+const I_TITLE_ITEM = ["Web Developer", "UI/UX Designer", "Photographer", "Writer", "Content Creator"];
