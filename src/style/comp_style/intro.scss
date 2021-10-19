@@ -1,0 +1,15 @@
+.i {
+  display: flex;
+  min-height: 100vh;
+  &-left {
+    flex: 1;
+    &-wrapper {
+      padding: 50px;
+    }
+  }
+  &-right {
+    flex: 1;
+    &-wrapper {
+    }
+  }
+}
