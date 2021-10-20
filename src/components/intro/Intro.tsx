@@ -1,4 +1,5 @@
 import React from "react";
+import Scroll from "../svg/Scroll";
 
 const Intro: React.FC = (): JSX.Element => {
   return (
@@ -16,14 +17,28 @@ const Intro: React.FC = (): JSX.Element => {
               ))}
             </div>
           </div>
-          <div className="i-desc">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores.</div>
+          <p className="i-desc">
+            I design and develop services for customers of all sizes,
+            specializing in creating stylish, modern websites, web services and
+            online stores.
+          </p>
         </div>
+        <Scroll />
       </div>
-      <div className="i-right">right</div>
+      <div className="i-right">
+        <div className="i-bg"></div>
+        <img src="/image/me.png" alt="" className="i-img" loading="lazy" />
+      </div>
     </div>
   );
 };
 
 export default Intro;
 
-const I_TITLE_ITEM = ["Web Developer", "UI/UX Designer", "Photographer", "Writer", "Content Creator"];
+const I_TITLE_ITEM = [
+  "Web Developer",
+  "UI/UX Designer",
+  "Photographer",
+  "Writer",
+  "Content Creator",
+];
