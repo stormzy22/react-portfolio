@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./style/index.scss";
 import "./style/style.scss";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 ReactDOM.render(
   <React.StrictMode>

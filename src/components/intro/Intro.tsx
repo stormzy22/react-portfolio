@@ -17,11 +17,7 @@ const Intro: React.FC = (): JSX.Element => {
               ))}
             </div>
           </div>
-          <p className="i-desc">
-            I design and develop services for customers of all sizes,
-            specializing in creating stylish, modern websites, web services and
-            online stores.
-          </p>
+          <p className="i-desc">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores.</p>
         </div>
         <Scroll />
       </div>
@@ -35,10 +31,4 @@ const Intro: React.FC = (): JSX.Element => {
 
 export default Intro;
 
-const I_TITLE_ITEM = [
-  "Web Developer",
-  "UI/UX Designer",
-  "Photographer",
-  "Writer",
-  "Content Creator",
-];
+const I_TITLE_ITEM: string[] = ["Web Developer", "UI/UX Designer", "Photographer", "Writer", "Content Creator"];

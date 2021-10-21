@@ -5,7 +5,7 @@ interface IProduct {
   img: string;
 }
 
-const Product: React.FC<IProduct> = (): JSX.Element => {
+const Product: React.FC<IProduct> = ({ img, link }: IProduct): JSX.Element => {
   return (
     <div className="p">
       <div className="p-browser">
@@ -13,6 +13,9 @@ const Product: React.FC<IProduct> = (): JSX.Element => {
         <div className="p-circle"></div>
         <div className="p-circle"></div>
       </div>
+      <a href={link} target="_blank" rel="noreferrer">
+        <img src={img} alt="" className="p-img" loading="lazy" />
+      </a>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "../Product/Product";
-import { products } from "../../data.js";
+import { products } from "../../data";
 
 const ProductList: React.FC = (): JSX.Element => {
   return (
@@ -15,7 +15,7 @@ const ProductList: React.FC = (): JSX.Element => {
       </div>
       <div className="pl-list">
         {products?.map((i, e) => (
-          <Product key={e} link={i.link} img={i.img} />
+          <Product key={e} link={i?.link} img={i?.img} />
         ))}
       </div>
     </div>

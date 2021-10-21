@@ -1,0 +1,40 @@
+.c {
+  min-height: 100vh;
+  position: relative;
+  &-bg {
+    width: 20px;
+    height: 100%;
+    background: #59b256;
+    position: absolute;
+  }
+  &-wrapper {
+    padding: 50px;
+    display: flex;
+    .c-left {
+      flex: 1;
+      .c-title {
+        font-size: 60px;
+        width: 60%;
+      }
+      .c-info {
+        &-item {
+          display: flex;
+          align-items: center;
+          margin: 50px 0px;
+          font-weight: 300;
+          width: 70%;
+          i {
+            font-size: 30px;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+    .c-right {
+      flex: 1;
+      .c-desc {
+        font-weight: 200;
+      }
+    }
+  }
+}
