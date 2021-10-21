@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const Contact: React.FC = (): JSX.Element => {
+  const formRef: React.MutableRefObject<HTMLFormElement | undefined> = useRef();
   return (
     <div className="c">
       <div className="c-bg"></div>
@@ -19,11 +20,12 @@ const Contact: React.FC = (): JSX.Element => {
           <p className="c-desc">
             <b>What’s your story?</b> Get in touch. Always available for freelancing if the right project comes along. me.
           </p>
-          <form>
+          <form ref={formRef}>
             <input type="text" name="user_name" id="" placeholder="Name" />
             <input type="text" name="user_subject" id="" placeholder="Subject" />
             <input type="text" name="user_email" id="" placeholder="Email" />
-            <textarea name="" id="" cols={30} rows={5}></textarea>
+            <textarea name="message" id="" cols={30} rows={5} placeholder="Message"></textarea>
+            <button>Submit</button>
           </form>
         </div>
       </div>
