@@ -43,14 +43,14 @@
       margin-top: 50px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       &-img {
         width: 120px;
         height: 120px;
         border-radius: 20px;
       }
       &-texts {
-        // width: 70%;
+        width: 70%;
       }
       &-title {
         font-weight: bold;
