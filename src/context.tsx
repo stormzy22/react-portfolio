@@ -13,7 +13,7 @@ const themeReducer = (state: IModes, action: IModes): IModes => {
   }
 };
 
-export const ThemeProvider = ({ children }: { children?: React.ReactNode }) => {
+export const ThemeProvider = ({ children }: { children?: React.ReactNode }): JSX.Element => {
   const [state, dispatch] = useReducer(themeReducer, INITIAL_STATE);
   return <ThemeContext.Provider value={{ state, dispatch }}>{children}</ThemeContext.Provider>;
 };

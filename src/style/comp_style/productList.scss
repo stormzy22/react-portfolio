@@ -21,3 +21,12 @@
     justify-content: space-between;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .pl {
+    padding: 10px;
+    &-texts {
+      width: 100%;
+    }
+  }
+}
