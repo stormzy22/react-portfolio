@@ -6,12 +6,8 @@ const ProductList: React.FC = (): JSX.Element => {
   return (
     <div className="pl">
       <div className="pl-texts">
-        <h1 className="pl-title">Create & inspire. It&apos;s Lama</h1>
-        <p className="pl-desc">
-          Lama is a creative portfolio that your work has been waiting for.
-          Beautiful homes, stunning portfolio styles & a whole lot more awaits
-          inside.
-        </p>
+        <h1 className="pl-title">Create & inspire. It&apos;s Stone</h1>
+        <p className="pl-desc">Stone is a creative portfolio that your work has been waiting for. Beautiful homes, stunning portfolio styles & a whole lot more awaits inside.</p>
       </div>
       <div className="pl-list">
         {products?.map((i, e) => (

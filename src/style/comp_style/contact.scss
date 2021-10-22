@@ -24,7 +24,7 @@
           font-weight: 300;
           width: 70%;
           i {
-            font-size: 30px;
+            font-size: 50px;
             margin-right: 20px;
           }
         }
@@ -41,13 +41,14 @@
       }
       form {
         margin-top: 20px;
+        display: flex;
+        flex-direction: column;
         input {
-          width: 50%;
           height: 50px;
           border: none;
-          outline: none;
+          // outline: none;
           border-bottom: 1px solid black;
-          margin: 10px 10px;
+          margin: 10px 0px;
           font-size: 14px;
           padding-left: 10px;
         }

@@ -1,9 +1,5 @@
 import React from "react";
-
-interface IProduct {
-  link: string;
-  img: string;
-}
+import { IProduct } from "../../interface";
 
 const Product: React.FC<IProduct> = ({ img, link }: IProduct): JSX.Element => {
   return (

@@ -1,7 +1,27 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import { ThemeContext } from "../../context";
 
 const Contact: React.FC = (): JSX.Element => {
-  const formRef: React.MutableRefObject<HTMLFormElement | undefined> = useRef();
+  const formRef = useRef<HTMLFormElement>(null);
+  const [done, setDone] = useState<boolean>(false);
+  const theme = useContext(ThemeContext);
+  const darkMode = theme?.state?.darkMode;
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    if (formRef.current !== null) {
+      emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, formRef.current, process.env.REACT_APP_EMAILJS_USER_ID).then(
+        () => {
+          setDone(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    }
+  };
+
   return (
     <div className="c">
       <div className="c-bg"></div>
@@ -20,12 +40,13 @@ const Contact: React.FC = (): JSX.Element => {
           <p className="c-desc">
             <b>What’s your story?</b> Get in touch. Always available for freelancing if the right project comes along. me.
           </p>
-          <form ref={formRef}>
-            <input type="text" name="user_name" id="" placeholder="Name" />
-            <input type="text" name="user_subject" id="" placeholder="Subject" />
-            <input type="text" name="user_email" id="" placeholder="Email" />
-            <textarea name="message" id="" cols={30} rows={5} placeholder="Message"></textarea>
+          <form ref={formRef} onSubmit={handleSubmit}>
+            <input style={{ background: darkMode && "#333" }} type="text" name="user_name" id="" placeholder="Name" />
+            <input style={{ background: darkMode && "#333" }} type="text" name="user_subject" id="" placeholder="Subject" />
+            <input style={{ background: darkMode && "#333" }} type="text" name="user_email" id="" placeholder="Email" />
+            <textarea style={{ background: darkMode && "#333" }} name="message" id="" cols={30} rows={5} placeholder="Message"></textarea>
             <button>Submit</button>
+            <h2> {done && "Message successfully Sent"}</h2>
           </form>
         </div>
       </div>
