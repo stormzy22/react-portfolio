@@ -41,10 +41,10 @@ const Contact: React.FC = (): JSX.Element => {
             <b>What’s your story?</b> Get in touch. Always available for freelancing if the right project comes along. me.
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
-            <input style={{ background: darkMode && "#333" }} type="text" name="user_name" id="" placeholder="Name" />
-            <input style={{ background: darkMode && "#333" }} type="text" name="user_subject" id="" placeholder="Subject" />
-            <input style={{ background: darkMode && "#333" }} type="text" name="user_email" id="" placeholder="Email" />
-            <textarea style={{ background: darkMode && "#333" }} name="message" id="" cols={30} rows={5} placeholder="Message"></textarea>
+            <input type="text" name="user_name" id="" placeholder="Name" className={darkMode ? "input-grey" : ""} />
+            <input type="text" name="user_subject" id="" placeholder="Subject" className={darkMode ? "input-grey" : ""} />
+            <input type="text" name="user_email" id="" placeholder="Email" className={darkMode ? "input-grey" : ""} />
+            <textarea name="message" id="" cols={30} rows={5} placeholder="Message" className={darkMode ? "input-grey" : ""}></textarea>
             <button>Submit</button>
             <h2> {done && "Message successfully Sent"}</h2>
           </form>

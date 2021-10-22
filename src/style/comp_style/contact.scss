@@ -43,18 +43,25 @@
         margin-top: 20px;
         display: flex;
         flex-direction: column;
+        width: 100%;
         input {
           height: 50px;
           border: none;
-          // outline: none;
           border-bottom: 1px solid black;
           margin: 10px 0px;
           font-size: 14px;
           padding-left: 10px;
+          display: block;
+        }
+        .input-grey {
+          background: #333;
+          color: white;
         }
         textarea {
           width: 100%;
           margin: 10px 0px;
+          border: 0;
+          resize: none;
         }
         button {
           border: none;
@@ -63,6 +70,25 @@
           color: #fff;
           font-weight: 500;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .c {
+    &-wrapper {
+      flex-direction: column;
+      .c-title {
+        font-size: 30px !important;
+      }
+      .c-info {
+        &-item {
+          width: 100%;
+          i {
+            font-size: 30px !important;
+          }
         }
       }
     }

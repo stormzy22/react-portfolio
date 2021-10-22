@@ -60,3 +60,27 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .a {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    &-left {
+      width: 100%;
+      .a-card {
+        height: 30vh;
+      }
+      .bg {
+        display: none;
+      }
+    }
+    &-right {
+      .a-award {
+        &-img {
+          display: none;
+        }
+      }
+    }
+  }
+}
