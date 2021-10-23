@@ -80,15 +80,22 @@
   .c {
     &-wrapper {
       flex-direction: column;
+      padding: 0px 50px;
       .c-title {
         font-size: 30px !important;
       }
       .c-info {
         &-item {
-          width: 100%;
+          width: 100% !important;
+          margin: 20px 0px !important;
           i {
             font-size: 30px !important;
           }
+        }
+      }
+      .c-right {
+        .c-desc {
+          display: none;
         }
       }
     }
